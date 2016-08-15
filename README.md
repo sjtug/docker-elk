@@ -3,7 +3,14 @@
 # SJTUG Notes
 Forked from [docker-elk](https://github.com/deviantony/docker-elk). Modified to satisfy our requirements.
 
-Only port `5061` of kibana is exposed. Assume that nginx log is stored under `/var/log/nginx/mirrors`(can be changed in `docker-compose.yml`)
+Assume that nginx log is stored under `/var/log/nginx/mirrors`(can be changed in `docker-compose.yml`).
+
+Port 5602 with HTTP basic auth is exposed as a reverse proxy of kibana. Default username/passwd is `sjtug:sjtug_mirror`. Use
+```
+rm ./nginx/htpasswd
+htpasswd -c ./nginx/htpasswd {{your_username}}
+```
+to generate your username:passwd.
 
 # Original docs
 
