@@ -1,4 +1,11 @@
-# Docker ELK stack
+# Docker ELK for SJTUG mirrors
+
+# SJTUG Notes
+Forked from [docker-elk](https://github.com/deviantony/docker-elk). Modified to satisfy our requirements.
+
+Only port `5061` of kibana is exposed. Assume that nginx log is stored under `/var/log/nginx/mirrors`(can be changed in `docker-compose.yml`)
+
+# Original docs
 
 [![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
